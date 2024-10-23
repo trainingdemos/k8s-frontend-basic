@@ -27,12 +27,12 @@ To build the container image you will need to have [Docker](https://www.docker.c
 
 If the build completes successfully, you will then be asked if you want to push the image. For this to succeed you will need to be authenticated to the specified registry with the appropriate account.
 
-If you want to change the fully-qualified image name, edit the `container.json` file within the `public/data` directory.
+If you want to change the fully-qualified image name (including the image registry) edit the `container.json` file within the `public/data` directory.
 
-⚠️ You should not edit the `docker-build.sh` file.
+⚠️ You should not edit the `docker-build.sh` file directly.
 
 
-The `container.json` file is used by both the Docker build script and the Next.js application at run time.
+This is because the `container.json` file is used by both the Docker build script and the Next.js application at run time.
 
 
 * `registry` and `namespace` are _optional_
@@ -50,9 +50,21 @@ Note that the values should not end with a trailing slash.
   }
 }
 ```
-## Deploying
+## Running in Docker
 
-The `containerPort` in the Pod spec should be set to port `80` (see example below) and then access to the Pod should be opened up using a Service object along with a NodePort or Ingress.
+A container image for this project has been made available on the [Docker Hub](https://hub.docker.com/r/trainingdemos/k8s-frontend-basic) for public use. To run the image using Docker you can use the following command:
+
+```bash
+docker run --rm -p 80:80 trainingdemos/k8s-frontend-basic
+```
+
+This will start an Nginx web server running on port `80` to serve the application. You can verify that the website is working by visiting [http://localhost](http://localhost) in a web browser.
+
+## Deploying to Kubernetes
+
+The `containerPort` in the Pod spec should be set to port `80` and then access to the Pod should be opened up using a Service object along with a NodePort or Ingress.
+
+Here is an example Pod object configuration:
 
 ```yaml
 apiVersion: v1
