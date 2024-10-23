@@ -4,7 +4,7 @@ This project creates a container that presents a basic web page built using [Nex
 
 When running it presents a basic web page displaying a confirmation message:
 
-<img src="https://static.noomedia.com/images/README/k8s-frontend-basic/screenshot.png" width="750">
+<img src="https://static.noomedia.com/images/README/k8s-frontend-basic/screenshot.png" width="500">
 
 ## Verifying
 
