@@ -1,0 +1,7 @@
+{
+  "image": {
+    "namespace": "trainingdemos",
+    "repository": "k8s-frontend-basic",
+    "tag": "1.0"
+  }
+}
