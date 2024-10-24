@@ -1,9 +1,9 @@
 {
   "name": "k8s-frontend-basic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
-    "clean": "rm -rf .next node_modules package-lock.json",
+    "clean": "rm -rf .next out node_modules package-lock.json",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

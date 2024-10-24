@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "k8s-frontend-basic",
-  description: "A basic web page displaying a confirmation message",
+  description: "A basic web page that displays a confirmation message",
 };
 
 export default function RootLayout({
