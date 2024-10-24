@@ -36,9 +36,9 @@ This is because the `container.json` file is used by both the Docker build scrip
 
 
 * `registry` and `namespace` are _optional_
-* `repository` and `tag` are _mandatory_
-
-Note that the values should not end with a trailing slash.
+  * Note that the values should not end with a trailing slash
+* `repository` and `tags` are _mandatory_
+  * `tags` is an array that should contain at least one value
 
 ```json
 {
@@ -46,7 +46,9 @@ Note that the values should not end with a trailing slash.
     "registry": "docker.io",
     "namespace": "trainingdemos",
     "repository": "k8s-frontend-basic",
-    "tag": "1.0"
+    "tags": [
+      "latest", "1.0", "1.0.2"
+    ]
   }
 }
 ```
