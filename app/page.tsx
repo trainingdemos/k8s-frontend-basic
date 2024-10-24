@@ -7,7 +7,7 @@ interface ContainerData {
     registry: string;
     namespace: string;
     repository: string;
-    tag: string;
+    tags: string[];
   };
 }
 
@@ -49,7 +49,14 @@ export default function Home() {
               {containerData.image.namespace
                 ? `${containerData.image.namespace}/`
                 : ""}
-              {containerData.image.repository}:{containerData.image.tag}
+              {containerData.image.repository}
+              {containerData.image.tags.length > 0
+                ? `:${
+                    containerData.image.tags[
+                      containerData.image.tags.length - 1
+                    ]
+                  }`
+                : ""}
             </>
           ) : (
             "Could not fetch data/container.json"
