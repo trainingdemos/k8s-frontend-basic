@@ -1,6 +1,6 @@
 # k8s-frontend-basic
 
-This project creates a container that displays a basic web page, built using [Next.js](https://nextjs.org) and delivered by [Nginx](https://nginx.org), for deployment into [Kubernetes](https://kubernetes.io). It is intended to be used as part of a lab exercise or an intructor-led walkthrough.
+This project creates a container image that displays a basic web page, built using [Next.js](https://nextjs.org) and delivered by [Nginx](https://nginx.org), for deployment into [Kubernetes](https://kubernetes.io). It is intended to be used as part of a lab exercise or an intructor-led walkthrough.
 
 When running it presents a basic web page displaying a confirmation message:
 
